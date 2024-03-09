@@ -1,0 +1,93 @@
+body {
+    background-color: #0F1C2E;
+} 
+
+.screen {
+    --primary-color: rgba(0,38,112,35%);
+    --second-color: rgba(0,38,112,75%);
+    --gradient-color: rgba(0,38,112,2%);
+    width: 500px;
+    border: 3px solid var(--primary-color);
+    aspect-ratio: 10/13.6;
+    border-radius: 1rem;
+    margin: 0 auto;
+    background-color: var(--second-color);
+    overflow: hidden;
+    position: relative;
+
+}
+
+.overlay {
+    background-size: 100% 9px;
+    background-image: linear-gradient(var(--primary-color),var(--gradient-color) 3px, transparent 3px,transparent 5px);
+    height: 100%;
+    width: 100%;
+    animation: gradient 22s infinite linear;
+    position: absolute;
+    z-index: 2;
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+.image {
+    background-image: url(../img/pexels-donald-tong-23273.jpg); 
+    height: 100%;
+    width: 100%;
+    background-size: 300%;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.6;
+    animation: imagio 12s linear infinite;
+    position: absolute;  
+}
+
+@keyframes imagio {
+    0% {
+        background-position: 36% 42%;
+        background-size: 300%;
+    }
+    20% {
+        background-position: 30% 50%;
+        background-size: 500%;
+    }
+    20.0001% {
+        background-position: 70% 90%;
+        background-size: 300%;
+    }
+    40% {
+        background-position: 80% 42%;
+        background-size: 300%;
+    }
+    40.0001% {
+        background-position: 10% 30%;
+        background-size: 500%;
+    }
+    60% {
+        background-position: 20% 80%;
+        background-size: 400%;
+    }
+    60.0001% {
+        background-position: 30% 65%;
+        background-size: 300%;
+    }
+    80% {
+        background-position: 20% 80%;
+        background-size: 400%;
+    }
+    80.0001% {
+        background-position: 80% 95%;
+        background-size: 300%;
+    }
+    100% {
+        background-position: 20% 80%;
+        background-size: 400%;
+    }
+}
+
