@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #1E1E1E
+}
+
+/*SKIP NAV LINK*/
+
+.skip-nav-link {
+    text-decoration: none;
+    position: absolute;
+    transform: translateY(-180%);
+    left: 0.5rem;
+    top: 0.5rem;
+    border-radius: 5px;
+    color: #dbdbdb;
+    background-image: linear-gradient(#8B5D33,#be8a5e);
+    padding: 2px 4px;
+    transition: transform 250ms ease-in;
+}
+
+.skip-nav-link:focus {
+    transform: translateY(0);
+}
+
+/*NORMAL CONTENT*/
+nav {
+    height: 10vh;
+    background-image: linear-gradient(#454545,#2d2d2d);
+}
+
+ul {   
+    display: flex;
+    justify-content: space-around;
+    list-style: none;   
+    padding-top: 20px;
+}
+
+ul a {
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 10px; 
+    text-decoration: underline; 
+    background-image: linear-gradient(#0085ff,#69b4ff);
+    color: #e1ffff;
+}
+
+ul a:hover {
+    background-image: linear-gradient(#8B0000,#c2402a);
+}
+
+ul a:focus {
+    background-image: linear-gradient(#8B0000,#c2402a);
+}
+
+abbr {
+    text-decoration: none;
+}
+
+div {
+    width: 400px;
+    height: 400px;
+    background-image: radial-gradient(#9e9e9e,#006fff);
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    height: 130vh;
+    width: 100%;   
+}
+
+p {
+    background-image: linear-gradient(#FF6600,#ff983f);
+    color: #ffffa1;
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+h1 {
+    background-image: linear-gradient(#d4eaf7,#b6ccd8);
+    color: #313d44;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+/* accessibility across mediums in this case printer */
+
+@media print {
+    nav {
+        display: none;
+    }
+} 
+
