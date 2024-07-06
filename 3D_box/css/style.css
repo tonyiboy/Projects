@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b6ccd8;
+}
+
+main {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.side {
+    position: absolute;
+    width: 500px;
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+.front {
+    background-color: #2E8B57;
+    transform: translateZ(250px);
+}
+
+.front p:hover {
+    scale: 1.5;
+    rotate: 45deg;
+    transition: all 2s ease;
+}
+
+.back {
+    background-color: #FF4081;
+    transform: translateZ(-250px) rotateY(180deg);
+}
+
+.back:hover {
+    background-color: #757de8;
+    transition: all 2s;
+}
+
+
+.right {
+    background-color: #5c5c5c;
+    transform: translateX(250px) rotateY(90deg);
+}
+
+.right p:hover {
+    font-size: 90px;
+    color: #FF6600;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.left {
+    background-color: #00E5FF;
+    transform: translateX(-250px) rotateY(-90deg);
+}
+
+.left p:hover {
+    font-size: 45px;
+    transition: all 2s;
+    rotate: x 360deg;
+}
+
+.top {
+    background-color: green;
+    transform: translateY(-250px) rotateX(90deg);
+}
+
+.top p:hover{
+    rotate: 360deg;
+    transition: all 4s;
+}
+
+.bottom.side {
+    background-color: purple;
+    transform: translateY(250px) rotateX(-90deg);
+}
+
+.bottom:hover {
+    color: #ffffa1;
+    background-color: black;
+    transition: all 2s;
+}
+
+.cube {
+    animation: rotate-cube 15s infinite linear;
+}
+
+@keyframes rotate-cube {
+    from {
+        transform: rotateX(45deg) rotateY(45deg); 
+    }
+
+    25% {
+        transform: rotateX(-45deg) rotateY(95deg); 
+    }
+
+    50% {
+        transform: rotateX(-45deg) rotateY(-45deg); 
+    }
+
+    75% {
+        transform: rotateX(45deg) rotateY(100deg); 
+    }
+
+    to {
+        transform: rotateX(45deg) rotateY(200deg); 
+    }
+}
+
+
